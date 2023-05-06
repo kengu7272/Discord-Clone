@@ -1,0 +1,1 @@
+This is a beginner react project that attempts to clone to popular discord app
