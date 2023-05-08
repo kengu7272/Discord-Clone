@@ -21,10 +21,10 @@ function Login() {
                     <p className='text-gray-400'>We're so excited to see you again!</p>
                 </div>
                 <p className='mt-3 mb-1'>EMAIL OR PHONE NUMBER <span className='text-red-500'>*</span></p>
-                <input type="text" className='w-full rounded-sm h-[6%] bg-zinc-900
+                <input type="text" className='w-full rounded-sm h-[8%] bg-zinc-900 text-base
                 desktop:h-[9.5%]' />
                 <p className='mt-5 mb-1'>PASSWORD <span className='text-red-500'>*</span></p>
-                <input type="password" className='w-full rounded-sm h-[6%] bg-zinc-900
+                <input type="password" className='w-full rounded-sm h-[8%] bg-zinc-900 text-base
                 desktop:h-[9.5%]'/>
                 <p className='text-blue-400 mt-1 mb-4'>Forgot your password?</p>
                 <button className='bg-indigo-600 w-full h-[6%] rounded-sm
