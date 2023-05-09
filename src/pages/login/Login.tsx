@@ -19,7 +19,7 @@ function Login() {
         tablet:justify-center
         laptop:w-[750px] laptop:justify-normal
         desktop:w-[800px]'>
-            <form className='mx-4 text-xs text-gray-200 h-full
+            <form className='mx-4 text-base text-gray-200 h-full
             tablet:w-3/5 tablet:mx-8 tablet:flex tablet:flex-col tablet:justify-center'>
 
                 <div className='hidden tablet:block text-center text-base'>
@@ -27,11 +27,11 @@ function Login() {
                     <p className='text-gray-400'>We're so excited to see you again!</p>
                 </div>
                 
-                <p className='mt-3 mb-1'>EMAIL OR PHONE NUMBER <span className='text-red-500'>*</span></p>
+                <p className='mt-3 mb-1 text-xs'>EMAIL OR PHONE NUMBER <span className='text-red-500'>*</span></p>
                 <input type="text" className='w-full rounded-sm h-[8%] bg-zinc-900
                 tablet:h-[9.5%] tablet:text-xl'/>
 
-                <p className='mt-5 mb-1'>PASSWORD <span className='text-red-500'>*</span></p>
+                <p className='mt-5 mb-1 text-xs'>PASSWORD <span className='text-red-500'>*</span></p>
                 <input type="password" className='w-full rounded-sm h-[8%] bg-zinc-900
                 tablet:h-[9.5%] tablet:text-xl'/>
 
