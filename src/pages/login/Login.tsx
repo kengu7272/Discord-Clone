@@ -15,9 +15,10 @@ function Login() {
         </div>
         
         <div className='h-3/5
-        tablet:flex tablet:flex-row tablet:w-5/6 tablet:h-[45%] tablet:bg-zinc-800 tablet:rounded-lg
-        laptop:w-3/4
-        desktop:w-2/5'><Link to="/Home">Home</Link>
+        tablet:flex tablet:flex-row tablet:w-[500px] tablet:h-[420px] tablet:bg-zinc-800 tablet:rounded-lg 
+        tablet:justify-center
+        laptop:w-[750px] laptop:justify-normal
+        desktop:w-[800px]'>
             <form className='mx-4 text-xs text-gray-200 h-full
             tablet:w-3/5 tablet:mx-8 tablet:flex tablet:flex-col tablet:justify-center'>
 
@@ -41,10 +42,11 @@ function Login() {
                 </button>
                 <br></br>
                 <p className='inline-block mt-2 text-gray-400'>Need an account?  <span className='inline-block ml-1 text-blue-400'>Register</span></p>
+                <Link to="/Home">Home</Link>
             </form>
 
             <div className='hidden text-center flex-col justify-center items-center
-            tablet:flex'>
+            laptop:flex'>
                 <img src={ qr } alt="QR Code" className='h-48 w-48'/>
                 <h2 className='mb-2 mt-8'>Log in with QR Code</h2>
                 <p className='text-gray-400'>Scan this with the <span className='font-bold'>Discord mobile app</span> to log in instantly.</p>
