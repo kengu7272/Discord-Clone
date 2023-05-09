@@ -1,0 +1,29 @@
+function Home() {
+    return (
+        <div className="bg-zinc-700 h-full flex flex-row overflow-hidden">
+            <div className="border-b-2 border-zinc-800 flex flex-row gap-6 items-center h-[7.5%] scrollbar-hide overflow-x-auto overflow-y-hidden py-3 w-fit">
+                <button>=</button>
+                <div>
+                    <p>Friends</p>
+                </div>
+                <button>Online</button>
+                <button>All</button>
+                <button>Pending</button>
+                <button>Blocked</button>
+                <button>Add Friend</button>
+            </div>
+
+            <div>
+                <div>
+
+                </div>
+
+                <div>
+
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default Home;

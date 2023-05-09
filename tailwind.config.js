@@ -11,6 +11,8 @@ export default {
       'desktop': '1280px',
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }
 
