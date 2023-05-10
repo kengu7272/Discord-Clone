@@ -10,7 +10,7 @@ interface TopButtonProps {
 
 const TopButton: React.FC<TopButtonProps> = ({word, onClick}) => {
     return (
-        <button className="whitespace-nowrap" onClick={onClick}>{word}</button>
+        <button className="whitespace-nowrap pr-auto" onClick={onClick}>{word}</button>
     );
 }
 
@@ -36,9 +36,8 @@ function Home() {
                         <img className='object-contain' src={logo} />
                     </button>
                     <div className='bg-zinc-700 w-5/6 h-[2px] mt-2 mb-4'/>
-
                 </div>
-                
+
                 <div className='flex flex-col my-2 flex-grow'>
                     <div className='flex flex-row justify-center mx-4'>
                         <div className='bg-zinc-900 h-[25px] w-full'>
@@ -48,10 +47,7 @@ function Home() {
 
                     <div className='bg-zinc-900 w-full h-[2px] mt-3 mb-4'/>
 
-                    <div className='flex flex-row items-center min-w-fit mx-4'>
-                        <img className='h-[25px] w-[30px]' src={wave} alt="waving person" />
-                        <TopButton word="Friends" onClick={checkToggle}/>
-                    </div>
+                    <button onClick={checkToggle} className='flex flex-row mx-4 w-auto'><img className='h-[25px] w-[30px]' src={wave} alt="waving person" /> Friends</button>
                 </div>
             </div>
 
