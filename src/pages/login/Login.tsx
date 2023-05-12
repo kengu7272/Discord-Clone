@@ -36,13 +36,12 @@ function Login() {
                 tablet:h-[9.5%] tablet:text-xl'/>
 
                 <p className='text-blue-400 mt-1 mb-4'>Forgot your password?</p>
-                <button className='bg-indigo-600 w-full h-[6%] rounded-sm
-                tablet:h-[9.5%]'>
-                    Log In
-                </button>
+                <Link className='bg-indigo-600 flex justify-center items-center w-full h-[6%] rounded-sm
+                tablet:h-[9.5%]' to="/Home">
+                    Login
+                </Link>
                 <br></br>
                 <p className='inline-block mt-2 text-gray-400'>Need an account?  <span className='inline-block ml-1 text-blue-400'>Register</span></p>
-                <Link to="/Home">Home</Link>
             </form>
 
             <div className='hidden text-center flex-col justify-center items-center
