@@ -30,4 +30,18 @@ const OnlineFriends: React.FC<FriendsProps> = ({name, status, img}) => {
     );
 }
 
-export default OnlineFriends;
+const Friends: React.FC<FriendsProps> = ({name, status, img}) => {
+    return (
+        <button className="flex flex-row items-center h-[55px] my-1 w-full">
+            <img className="w-[40px] h-[40px] object-contain rounded-full ml-2" 
+                src={img} alt="pfp" />
+
+            <div className="flex flex-col justify-center h-full ml-3 text-left flex-grow">
+                <h4>{name}</h4>
+                <p className="text-sm">{status}</p>
+            </div>
+        </button>
+    );
+}
+
+export { OnlineFriends, Friends };
