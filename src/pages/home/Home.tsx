@@ -40,9 +40,9 @@ function Home() {
     return (
         <div className='flex flex-row h-full overflow-hidden text-zinc-400 w-full'>
             <div style={{display: toggle == 0 || toggle == 2 ? 'flex' : 'none'}} className='flex-row h-full w-full
-            tablet:w-[375px]'>
+            tablet:w-[385px]'>
 
-                <div className='bg-zinc-900 flex flex-col min-h-full items-center pt-4 px-2 w-[75px]'>
+                <div className='bg-zinc-900 flex flex-col min-h-full items-center pt-4 px-2 w-[85px]'>
                     <button className='bg-indigo-600 h-[50px] w-[50px] p-3 rounded-2xl' onClick={checkToggle}>
                         <img className='object-contain' src={logo} />
                     </button>
@@ -52,7 +52,8 @@ function Home() {
                     <SideButton img={checkered} name="Test Server 1" onClick={Test} />
                 </div>
 
-                <div className='flex flex-col w-[300px] bg-[#1e1e20]'>
+                <div className='flex flex-col flex-grow bg-[#1e1e20]
+                tablet:w-[300px]'>
                     <div className='h-[50px] flex py-3 flex-row justify-center items-center mx-4
                     tablet:h-[55px] tablet:mb-0'>
                         <div className='bg-zinc-900 h-[25px] w-full'>
