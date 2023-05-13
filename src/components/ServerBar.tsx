@@ -1,21 +1,18 @@
 import logo from '../images/discord-mark-white.png'   
 import { SideButton } from './Buttons';
 import pink from '../images/pink.png'
+import { Link } from 'react-router-dom';
 
-interface ServerBarProps {
-    func: () => void;
-}
-
-const ServerBar: React.FC<ServerBarProps> =  ({func}) => {
+function ServerBar() {
     return (
         <div className='bg-zinc-900 flex flex-col min-h-full items-center pt-4 px-2 w-[85px]'>
-            <button className='bg-indigo-600 h-[50px] w-[50px] p-3 rounded-2xl' onClick={func}>
+            <Link className='bg-indigo-600 h-[50px] w-[50px] p-3 rounded-2xl flex items-center justify-center' to="/Home">
                 <img className='object-contain' src={logo} />
-            </button>
+            </Link>
 
-            <div className='bg-zinc-700 w-5/6 h-[2px] mt-2 mb-4'/>
+            <div className='bg-zinc-700 w-5/6 h-[2px] my-3'/>
 
-            <SideButton img={pink} name="Test Server 1" onClick={func} />
+            <SideButton img={pink} name="Test Server 1"/>
         </div>
     );
 }

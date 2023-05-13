@@ -31,7 +31,7 @@ function Home() {
         <div className='flex flex-row h-full overflow-hidden text-zinc-400 w-full'>
             <div style={{display: toggle == 0 || toggle == 2 ? 'flex' : 'none'}} className='flex-row h-full w-full
             tablet:w-[385px]'>
-                <ServerBar func={checkToggle} />
+                <ServerBar/>
                 <FriendsBar />
             </div>
 

@@ -36,7 +36,7 @@ function Login() {
                 tablet:h-[9.5%] tablet:text-xl'/>
 
                 <p className='text-blue-400 mt-1 mb-4'>Forgot your password?</p>
-                <Link className='bg-indigo-600 flex justify-center items-center w-full h-[6%] rounded-sm
+                <Link className='bg-indigo-600 flex justify-center items-center w-full h-[8%] rounded-sm
                 tablet:h-[9.5%]' to="/Home">
                     Login
                 </Link>

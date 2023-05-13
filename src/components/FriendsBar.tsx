@@ -7,7 +7,7 @@ import cloud from '../images/cloud.png';
 import gray from '../images/gray.png';
 import purple from'../images/purple.png';
 import { Link } from 'react-router-dom';
-import gear from '../images/gear.png';
+import StatusBar from "./StatusBar";
 
 function FriendsBar () {
     return (
@@ -48,11 +48,7 @@ function FriendsBar () {
                 <Friends name="Cura" status="Cura Cura" img={gray} />
             </div>
 
-            <div className="h-[55px] w-full bg-[#171719] flex flex-row items-center">
-                <img className="mx-3 h-[35px] rounded-full object-contain" src={gray} />
-                <h4>DreamtSpirit</h4>
-                <Link className="ml-auto mr-3" to="/Home"><img className="object=contain h-[35px]" src={gear} /></Link>
-            </div>
+            <StatusBar/>
         </div>
 );
 }
