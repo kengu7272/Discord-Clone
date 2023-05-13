@@ -1,11 +1,11 @@
-import logo from './discord-logo-white.png'
-import qr from './qr.png'
+import logo from '../../images/discord-logo-white.png'
+import qr from '../../images/qr.png'
 import {Link} from "react-router-dom";
 
 function Login() {
     return (
     <div className='w-full h-full bg-zinc-800 text-white text-sm
-    tablet:flex tablet:flex-row tablet:justify-center tablet:items-center tablet:bg-[url("/src/pages/login/background.jpg")]'>
+    tablet:flex tablet:flex-row tablet:justify-center tablet:items-center tablet:bg-[url("/src/images/background.jpg")]'>
 
         <div className='flex flex-col items-center gap-1
         tablet:hidden'>
