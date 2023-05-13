@@ -26,8 +26,9 @@ function FriendsBar () {
                 <img className='h-[25px] w-[30px]' src={wave} alt="waving person" />Friends
             </Link>
 
-            <div className='flex-grow h-[100px] p-4 scrollbar-thumb-zinc-900 scrollbar-thin overflow-y-auto'>
-                <p className='mb-2 text-sm'>DIRECT MESSAGES</p>
+            <p className='ml-4 mt-4 mb-2 text-sm'>DIRECT MESSAGES</p>
+
+            <div className='flex-grow h-[100px] px-4 scrollbar-thumb-zinc-900 scrollbar-thin overflow-y-auto'>
                 <Friends name="DiscordBot" status="Working on a task" img={logo} />
                 <Friends name="Jen" status="Playing Rocket League" img={pink} />
                 <Friends name="Joseph" status="" img={checkered} />
@@ -47,7 +48,7 @@ function FriendsBar () {
                 <Friends name="Cura" status="Cura Cura" img={gray} />
             </div>
 
-            <div className="h-[50px] w-full bg-[#171719] flex flex-row items-center">
+            <div className="h-[55px] w-full bg-[#171719] flex flex-row items-center">
                 <img className="mx-3 h-[35px] rounded-full object-contain" src={gray} />
                 <h4>DreamtSpirit</h4>
                 <Link className="ml-auto mr-3" to="/Home"><img className="object=contain h-[35px]" src={gear} /></Link>
