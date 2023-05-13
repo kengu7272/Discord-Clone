@@ -13,15 +13,15 @@ interface OnlineFriendsBarProps {
 
 const OnlineFriendsBar: React.FC<OnlineFriendsBarProps> = ({online}) => {
     return (
-        <div className='m-4 h-0 flex-grow flex flex-col relative'>
-            <div className='bg-zinc-900 flex flex-row h-[35px] items-center w-full'>
+        <div className='h-0 flex-grow flex flex-col relative'>
+            <div className='bg-zinc-900 flex flex-row h-[35px] items-center mt-5 mx-4'>
                 <input type="text" className='bg-inherit ml-2 outline-none text-zinc-400 w-full' placeholder='Search' />
-                <img src={glass} className='h-[20px] w-[20px] absolute right-1'/>
+                <img src={glass} className='h-[20px] w-[20px] absolute right-6'/>
             </div>
 
-            <p className='text-sm mt-5 mb-3'>ONLINE — {online}</p>
+            <p className='text-sm mt-5 mb-3 ml-4'>ONLINE — {online}</p>
 
-            <div className='h-[100px] flex-grow overflow-y-auto pr-2 scrollbar-thumb-zinc-900 scrollbar-thin'>
+            <div className='h-[100px] w-full px-4 flex-grow overflow-y-auto scrollbar-thumb-zinc-900 scrollbar-thin'>
                 <OnlineFriends name="DiscordBot" status="Working on a task" img={logo} />
                 <OnlineFriends name="Jen" status="Playing Rocket League" img={pink} />
                 <OnlineFriends name="Joseph" status="" img={checkered} />

@@ -4,10 +4,6 @@ import FriendsBar from '../../components/FriendsBar';
 import OnlineFriendsBar from '../../components/OnlineFriendsBar';
 import TopButtonsBar from '../../components/TopButtonsBar';
 
-function Test() {
-    console.log("Hello World!");
-}
-
 function Home() {
     let online = 17;
 
@@ -36,15 +32,12 @@ function Home() {
             <div style={{display: toggle == 0 || toggle == 2 ? 'flex' : 'none'}} className='flex-row h-full w-full
             tablet:w-[385px]'>
                 <ServerBar func={checkToggle} />
-                <FriendsBar func={Test} />
+                <FriendsBar />
             </div>
 
             <div style={{display: toggle == 1 || toggle == 2 ? 'flex' : 'none'}} className="flex-col h-full w-full">
-
                 <TopButtonsBar func={checkToggle} />
-
                 <div className='bg-zinc-900 h-[2px] w-full'></div>
-
                 <OnlineFriendsBar online={online} />
             </div>
         </div>
