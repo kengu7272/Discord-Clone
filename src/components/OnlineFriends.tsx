@@ -1,5 +1,5 @@
-import chat from './chatbox.png';
-import dot from './3dot.png';
+import chat from '../images/chatbox.png';
+import dot from '../images/3dot.png';
 
 interface FriendsProps {
     name: string;

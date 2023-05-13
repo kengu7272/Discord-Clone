@@ -3,6 +3,8 @@ interface TopButtonProps {
     onClick: () => void;
 }
 
+import { Link } from 'react-router-dom';
+
 const TopButton: React.FC<TopButtonProps> = ({word, onClick}) => {
     return (
         <button className="whitespace-nowrap" onClick={onClick}>{word}</button>
@@ -11,15 +13,14 @@ const TopButton: React.FC<TopButtonProps> = ({word, onClick}) => {
 
 interface SideButtonProps {
     img: string;
-    onClick: () => void;
     name: string;
 }
 
-const SideButton: React.FC<SideButtonProps> = ({img, onClick, name}) => {
+const SideButton: React.FC<SideButtonProps> = ({img, name}) => {
 
     return (
         <div className="h-[50px] w-[50px] flex flex-row items-center">
-            <button className='h-full w-full' onClick={onClick}
+            <Link className='h-full w-full' to="/Server"
             onMouseEnter={(e) => {
                 const sibling = e.currentTarget.nextElementSibling;
                 if(sibling) {
@@ -35,7 +36,7 @@ const SideButton: React.FC<SideButtonProps> = ({img, onClick, name}) => {
                 }
             }}>
                 <img className='object-contain rounded-full' src={img} />
-            </button>
+            </Link>
             
             <div className="hidden bg-zinc-900 h-[35px] px-2 rounded-xl flex-row items-center
             justify-center absolute whitespace-nowrap left-20">
