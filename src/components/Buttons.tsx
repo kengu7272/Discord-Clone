@@ -19,7 +19,7 @@ interface SideButtonProps {
 const SideButton: React.FC<SideButtonProps> = ({img, name}) => {
 
     return (
-        <div className="h-[50px] w-[50px] flex flex-row items-center">
+        <div className="h-[50px] w-[50px] flex flex-row items-center text-white">
             <Link className='h-full w-full' to="/Server"
             onMouseEnter={(e) => {
                 const sibling = e.currentTarget.nextElementSibling;
