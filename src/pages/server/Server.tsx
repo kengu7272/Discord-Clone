@@ -2,11 +2,49 @@ import ServerChannelsBar from "../../components/ServerChannelsBar";
 import ServerBar from "../../components/ServerBar";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { KeyboardEvent } from "react";
 
 function UploadMessage() {
-    return (
-        <h4>Message</h4>
-    );
+    let input = document.getElementById('input') as HTMLInputElement;
+
+    if(input.value === "")
+        return;
+
+    let messages = document.getElementById("messages");
+
+    let time = new Date().toLocaleTimeString();
+    let timeElement = document.createElement('p');
+    timeElement.textContent = time;
+
+    let newMessage = document.createElement('div');
+    newMessage.classList.add('flex', 'flex-col', 'justify-center')
+
+    let nameAndDate = document.createElement('div');
+    nameAndDate.classList.add('flex', 'flex-row', 'items-center', 'gap-2')
+
+    let name = document.createElement('h5');
+    name.textContent = "TestUser";
+    name.classList.add('font-bold')
+
+    nameAndDate.appendChild(name);
+    nameAndDate.appendChild(timeElement);
+
+    let message = document.createElement('p');
+    message.classList.add('break-words');
+    message.textContent = input.value;
+
+    newMessage.appendChild(nameAndDate);
+    newMessage.appendChild(message);
+
+    messages.appendChild(newMessage);
+
+    input.value = "";
+}
+
+const Enter = (e: KeyboardEvent<HTMLInputElement>) => {
+    if(e.key == 'Enter') {
+        UploadMessage();
+    }
 }
 
 interface ServerProps {
@@ -27,7 +65,7 @@ const Server: React.FC<ServerProps> = ({name}) => {
     }
 
     return (
-        <div className="w-full h-full flex flex-row">
+        <div className="w-full h-full flex flex-row max-h-[100vh]">
             <div  style={{display: toggle == 0 ? 'none' : 'flex'}}>
                 <ServerBar func={ToHome}/>
                 <ServerChannelsBar name={name} func={checkToggle} />
@@ -39,14 +77,16 @@ const Server: React.FC<ServerProps> = ({name}) => {
                     <h2>general</h2>
                 </div>
 
-                <div className='bg-zinc-900 w-full h-[2px] mb-4'/>
+                <div className='bg-zinc-900 w-full h-[2px] mb-2'/>
 
-                <div className="w-full h-full p-4 relative flex flex-col items-center
+                <div id="messages" className="w-full max-w-full h-full overflow-y-auto px-4 flex flex-col gap-2"></div>
+
+                <div className="w-full h-100px py-4 px-2 bottom-0 flex flex-col items-center
                 laptop:min-w-0 laptop:flex-grow">
-                    <form className="h-[4.5vh] flex flex-row items-center justify-center gap-4 bottom-4 absolute w-full">
-                        <input className="w-5/6 px-2 h-full bg-zinc-700" placeholder="Enter a message"></input>
+                    <div className="flex flex-row items-center justify-center gap-4 w-full">
+                        <input id="input" className="w-5/6 px-2 min-h-full bg-zinc-700" placeholder="Enter a message" onKeyDown={Enter}></input>
                         <button onClick={UploadMessage} className="text-3xl">+</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

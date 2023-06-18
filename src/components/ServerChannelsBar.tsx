@@ -18,7 +18,7 @@ const ServerChannelsBar: React.FC<ServerChannelsBarProps> = ({name, func}) => {
             <div className='flex-grow h-[100px] px-2 scrollbar-thumb-zinc-900 scrollbar-thin
             overflow-y-auto text-gray-400 text-base'>
                 <p className="text-sm my-4">TEXT CHANNELS</p>
-                <button onClick={func} className="px-4 flex flex-row items-center hover:bg-zinc-700">
+                <button onClick={func} className="px-4 flex flex-row items-center hover:bg-zinc-700 rounded-lg">
                     <p>general</p>
                 </button>
             </div>
