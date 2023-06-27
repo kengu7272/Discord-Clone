@@ -12,6 +12,10 @@ function UploadMessage() {
 
     let messages = document.getElementById("messages");
 
+    if(!messages) {
+        return;
+    }
+
     let time = new Date().toLocaleTimeString();
     let timeElement = document.createElement('p');
     timeElement.textContent = time;
