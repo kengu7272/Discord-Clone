@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
 import StatusBar from "./StatusBar";
 
 interface ServerChannelsBarProps {
-    name: string;
+    name: string
+    func: () => void;
 }
 
-const ServerChannelsBar: React.FC<ServerChannelsBarProps> = ({name}) => {
+const ServerChannelsBar: React.FC<ServerChannelsBarProps> = ({name, func}) => {
     return (
         <div className='flex flex-col w-[255px] bg-[#1e1e20]'>
             <div className='h-[50px] flex py-3 flex-row justify-center items-center mx-4
@@ -18,14 +18,9 @@ const ServerChannelsBar: React.FC<ServerChannelsBarProps> = ({name}) => {
             <div className='flex-grow h-[100px] px-2 scrollbar-thumb-zinc-900 scrollbar-thin
             overflow-y-auto text-gray-400 text-base'>
                 <p className="text-sm my-4">TEXT CHANNELS</p>
-                <Link to="/" className="p-2 flex flex-row items-center hover:bg-zinc-700">
+                <button onClick={func} className="px-4 flex flex-row items-center hover:bg-zinc-700 rounded-lg">
                     <p>general</p>
-                </Link>
-
-                <p className="text-sm my-4">VOICE CHANNELS</p>
-                <div className="flex flex-row items-center p-2 hover:bg-zinc-700">
-                    <p>General</p>
-                </div>
+                </button>
             </div>
 
             <StatusBar />
