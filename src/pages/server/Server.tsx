@@ -3,6 +3,7 @@ import ServerBar from "../../components/ServerBar";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { KeyboardEvent } from "react";
+import gray from '../../images/gray.png'
 
 function UploadMessage() {
     let input = document.getElementById('input') as HTMLInputElement;
@@ -19,6 +20,14 @@ function UploadMessage() {
     let time = new Date().toLocaleTimeString();
     let timeElement = document.createElement('p');
     timeElement.textContent = time;
+
+
+    let wrapper = document.createElement('div');
+    wrapper.classList.add('flex', 'flex-row', 'items-center', 'gap-4');
+
+    let pfp = document.createElement('img');
+    pfp.classList.add('rounded-full', 'max-h-10', 'w-auto');
+    pfp.src = gray;
 
     let newMessage = document.createElement('div');
     newMessage.classList.add('flex', 'flex-col', 'justify-center')
@@ -40,7 +49,10 @@ function UploadMessage() {
     newMessage.appendChild(nameAndDate);
     newMessage.appendChild(message);
 
-    messages.appendChild(newMessage);
+    wrapper.appendChild(pfp);
+    wrapper.appendChild(newMessage)
+
+    messages.appendChild(wrapper);
 
     input.value = "";
 }
