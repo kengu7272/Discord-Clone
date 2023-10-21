@@ -1,12 +1,17 @@
+// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: "kevin-s-discord-clone.firebaseapp.com",
-  projectId: "kevin-s-discord-clone",
-  storageBucket: "kevin-s-discord-clone.appspot.com",
-  messagingSenderId: "836177137512",
-  appId: "1:836177137512:web:01ac27406a24b59aad50dd"
+  apiKey: "AIzaSyC-sPvypWrB934zAYSA14Jr84dZRD1ht4E",
+  authDomain: "kevindiscordclone.firebaseapp.com",
+  projectId: "kevindiscordclone",
+  storageBucket: "kevindiscordclone.appspot.com",
+  messagingSenderId: "1086288115599",
+  appId: "1:1086288115599:web:2f9cbe1638cd866fd67dfa"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
